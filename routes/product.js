@@ -101,6 +101,13 @@ router.get('/', async (req, res) => {
     })
 })
 
+router.get("/suggestion", async (req, res, next) => {
+    const search = req.query.search
+    const products = await Product.find({ title: { $regex: search, $options: "i" } }).select("_id title").limit(10)
+
+    res.json(products)
+})
+
 router.get('/:id', async (req, res) => {
     const product =
         await Product.findById(req.params.id)

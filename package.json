@@ -21,6 +21,8 @@
     "nodemon": "^3.1.14",
     "passport": "^0.7.0",
     "passport-facebook": "^3.0.0",
-    "passport-google-oauth2": "^0.2.0"
+    "passport-google-oauth2": "^0.2.0",
+    "winston": "^3.17.0",
+    "winston-mongodb": "^6.0.0"
   }
 }
