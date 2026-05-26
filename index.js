@@ -11,6 +11,7 @@ const authRoutes = require('./routes/auth')
 const categoryRoutes = require('./routes/category')
 const productRoutes = require('./routes/product')
 const cartRoutes = require('./routes/cart')
+const orderRoutes = require('./routes/order')
 
 const winston = require('winston')
 const mongoose = require('mongoose');
@@ -75,6 +76,7 @@ app.use('/api/auth', authRoutes)
 app.use('/api/category', categoryRoutes)
 app.use('/api/product', productRoutes)
 app.use('/api/cart', cartRoutes)
+app.use('/api/order', orderRoutes)
 
 app.use((error, req, res, next) => {
     console.log("error middleware is running")
